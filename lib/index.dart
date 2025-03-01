@@ -1,9 +1,5 @@
 // Export pages
 export '/pages/chat_bot/chat_bot_widget.dart' show ChatBotWidget;
-export '/pages/registro_usuarios/registro_usuarios_widget.dart'
-    show RegistroUsuariosWidget;
-export '/pages/iniciar_sesion/iniciar_sesion_widget.dart'
-    show IniciarSesionWidget;
 export '/pages/olvidar_contrasena/olvidar_contrasena_widget.dart'
     show OlvidarContrasenaWidget;
 export '/pages/inicio/inicio_widget.dart' show InicioWidget;
@@ -20,3 +16,5 @@ export '/pages/metricas/metricas_widget.dart' show MetricasWidget;
 export '/pages/detalle_producto/detalle_producto_widget.dart'
     show DetalleProductoWidget;
 export '/pages/editar_perfil/editar_perfil_widget.dart' show EditarPerfilWidget;
+export '/pages/iniciar_sesion_registrarse/iniciar_sesion_registrarse_widget.dart'
+    show IniciarSesionRegistrarseWidget;

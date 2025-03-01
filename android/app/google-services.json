@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "262966855587",
+    "project_id": "app-concrepal-dil3em",
+    "storage_bucket": "app-concrepal-dil3em.firebasestorage.app"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:262966855587:android:f27ee34a7fce6311b0bc16",
+        "android_client_info": {
+          "package_name": "com.concrepal.appconcrepal"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyChuzW2EAMVM-roNDqHzzrBARSf6thMjUw"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

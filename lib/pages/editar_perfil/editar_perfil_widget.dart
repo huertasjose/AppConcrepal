@@ -26,17 +26,17 @@ class _EditarPerfilWidgetState extends State<EditarPerfilWidget> {
     super.initState();
     _model = createModel(context, () => EditarPerfilModel());
 
-    _model.textController1 ??= TextEditingController();
-    _model.textFieldFocusNode1 ??= FocusNode();
+    _model.nombreCompletoTextController ??= TextEditingController();
+    _model.nombreCompletoFocusNode ??= FocusNode();
 
-    _model.textController2 ??= TextEditingController();
-    _model.textFieldFocusNode2 ??= FocusNode();
+    _model.telefonoTextController ??= TextEditingController();
+    _model.telefonoFocusNode ??= FocusNode();
 
     _model.textController3 ??= TextEditingController();
-    _model.textFieldFocusNode3 ??= FocusNode();
+    _model.textFieldFocusNode1 ??= FocusNode();
 
     _model.textController4 ??= TextEditingController();
-    _model.textFieldFocusNode4 ??= FocusNode();
+    _model.textFieldFocusNode2 ??= FocusNode();
   }
 
   @override
@@ -147,10 +147,10 @@ class _EditarPerfilWidgetState extends State<EditarPerfilWidget> {
                   children: [
                     Expanded(
                       child: Container(
-                        width: 200.0,
+                        width: MediaQuery.sizeOf(context).width * 0.6,
                         child: TextFormField(
-                          controller: _model.textController1,
-                          focusNode: _model.textFieldFocusNode1,
+                          controller: _model.nombreCompletoTextController,
+                          focusNode: _model.nombreCompletoFocusNode,
                           autofocus: false,
                           obscureText: false,
                           decoration: InputDecoration(
@@ -161,7 +161,7 @@ class _EditarPerfilWidgetState extends State<EditarPerfilWidget> {
                                   fontFamily: 'Inter',
                                   letterSpacing: 0.0,
                                 ),
-                            hintText: 'Nombre',
+                            hintText: 'Nombre completo',
                             hintStyle: FlutterFlowTheme.of(context)
                                 .labelMedium
                                 .override(
@@ -206,7 +206,8 @@ class _EditarPerfilWidgetState extends State<EditarPerfilWidget> {
                                     letterSpacing: 0.0,
                                   ),
                           cursorColor: FlutterFlowTheme.of(context).primaryText,
-                          validator: _model.textController1Validator
+                          validator: _model
+                              .nombreCompletoTextControllerValidator
                               .asValidator(context),
                         ),
                       ),
@@ -223,8 +224,8 @@ class _EditarPerfilWidgetState extends State<EditarPerfilWidget> {
                       child: Container(
                         width: 200.0,
                         child: TextFormField(
-                          controller: _model.textController2,
-                          focusNode: _model.textFieldFocusNode2,
+                          controller: _model.telefonoTextController,
+                          focusNode: _model.telefonoFocusNode,
                           autofocus: false,
                           obscureText: false,
                           decoration: InputDecoration(
@@ -235,7 +236,7 @@ class _EditarPerfilWidgetState extends State<EditarPerfilWidget> {
                                   fontFamily: 'Inter',
                                   letterSpacing: 0.0,
                                 ),
-                            hintText: 'Apellido',
+                            hintText: 'Teléfono',
                             hintStyle: FlutterFlowTheme.of(context)
                                 .labelMedium
                                 .override(
@@ -279,8 +280,9 @@ class _EditarPerfilWidgetState extends State<EditarPerfilWidget> {
                                     fontFamily: 'Inter',
                                     letterSpacing: 0.0,
                                   ),
+                          keyboardType: TextInputType.number,
                           cursorColor: FlutterFlowTheme.of(context).primaryText,
-                          validator: _model.textController2Validator
+                          validator: _model.telefonoTextControllerValidator
                               .asValidator(context),
                         ),
                       ),
@@ -298,7 +300,7 @@ class _EditarPerfilWidgetState extends State<EditarPerfilWidget> {
                         width: 200.0,
                         child: TextFormField(
                           controller: _model.textController3,
-                          focusNode: _model.textFieldFocusNode3,
+                          focusNode: _model.textFieldFocusNode1,
                           autofocus: false,
                           obscureText: false,
                           decoration: InputDecoration(
@@ -372,7 +374,7 @@ class _EditarPerfilWidgetState extends State<EditarPerfilWidget> {
                         width: 200.0,
                         child: TextFormField(
                           controller: _model.textController4,
-                          focusNode: _model.textFieldFocusNode4,
+                          focusNode: _model.textFieldFocusNode2,
                           autofocus: false,
                           obscureText: false,
                           decoration: InputDecoration(
